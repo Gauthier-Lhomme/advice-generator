@@ -1,7 +1,7 @@
 import Advice from "./components/Advice";
 
 
-function App() {
+const App = () => {
   return (
     <div >
       <Advice/>
