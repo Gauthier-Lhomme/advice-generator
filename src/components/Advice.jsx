@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import mobileDivider from "../images/pattern-divider-mobile.svg";
-import { Button, DivAdvice, MainDiv } from "../styled-components/Advice";
+import { Button, DivAdvice, DivLoading, H2, Img, MainDiv, P } from "../styled-components/Advice";
 import { getRandomAdvice } from "../api/advice.api";
 
 const App = () => {
@@ -28,16 +28,16 @@ const App = () => {
   return (
     <MainDiv>
       {isLoading ? (
-        <div><img src="https://i.stack.imgur.com/ATB3o.gif" alt="" /> Loading</div>
+        <DivLoading> Loading</DivLoading>
       ) : error ? (
         <p>{error}</p>
       ) : (
         <DivAdvice>
-          <h2>Advice #{advice?.id}</h2>
-          <p>{advice?.advice}</p>
+          <H2>Advice #{advice?.id}</H2>
+          <P>"{advice?.advice}"</P>
         </DivAdvice>
       )}
-      <img src={mobileDivider} alt="" />
+      <Img src={mobileDivider} alt="" />
       <Button onClick={fetchData}></Button>
     </MainDiv>
   );
