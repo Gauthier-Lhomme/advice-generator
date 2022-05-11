@@ -2,6 +2,7 @@ import styled from "styled-components";
 import dice from "../images/icon-dice.svg";
 import dividerDesktop from "../images/pattern-divider-desktop.svg";
 import { Device } from "../asset/device";
+import { keyframes } from "styled-components";
 
 export const MainDiv = styled.div`
   @media ${Device.mobile} {
@@ -38,6 +39,9 @@ export const Button = styled.button`
   margin: 0 auto;
   background-color: #5ff75f;
   border-radius: 45px;
+  &:hover {
+    box-shadow: 0 1px 20px #adecad;
+  }
 `;
 
 export const H2 = styled.h2`
@@ -52,26 +56,36 @@ export const H2 = styled.h2`
 `;
 
 export const P = styled.p`
+
   color: whitesmoke;
   font-weight: 500;
   font-size: 1.6rem;
   padding: 0 1.6vh;
   padding-bottom: 3vh;
-
   @media ${Device.mobile} {
     font-size: 1.5rem;
   }
 `;
 
-export const Img = styled.img`
-
-  display: block;
+export const ImgDesktop = styled.img`
   margin: 0px auto;
-  padding-left: 2vh ;
-    padding-right: 2vh ;
+  width: 100%;
+  padding-left: 4vh;
+  padding-right: 4vh;
+  @media ${Device.mobile} {
+    display: none;
+  }
+`;
+
+export const Img = styled.img`
+  display: none;
   @media ${Device.mobile} {
     padding-bottom: 6vh;
     width: 100%;
+    display: block;
+    margin: 0px auto;
+    padding-left: 2vh;
+    padding-right: 2vh;
   }
 `;
 
@@ -81,3 +95,17 @@ export const DivLoading = styled.div`
   font-size: 1.5rem;
   padding-top: 6vh;
 `;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+export const Animation = styled.div`
+  animation: ${fadeIn} 2s linear ;
+  font-size: 1.2rem;
+`

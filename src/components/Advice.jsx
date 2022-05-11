@@ -1,6 +1,19 @@
 import React, { useState, useEffect } from "react";
 import mobileDivider from "../images/pattern-divider-mobile.svg";
-import { Button, DivAdvice, DivLoading, H2, Img, MainDiv, P } from "../styled-components/Advice";
+import desktopDivider from "../images/pattern-divider-desktop.svg";
+
+import {
+  Animation,
+  Button,
+  DivAdvice,
+  DivLoading,
+  FadeIn,
+  H2,
+  Img,
+  ImgDesktop,
+  MainDiv,
+  P,
+} from "../styled-components/Advice";
 import { getRandomAdvice } from "../api/advice.api";
 
 const App = () => {
@@ -24,7 +37,7 @@ const App = () => {
     setError("");
     fetchData();
   }, []);
-  
+
   return (
     <MainDiv>
       {isLoading ? (
@@ -33,11 +46,14 @@ const App = () => {
         <p>{error}</p>
       ) : (
         <DivAdvice>
-          <H2>Advice #{advice?.id}</H2>
-          <P>"{advice?.advice}"</P>
+          <Animation>
+            <H2>Advice #{advice?.id}</H2>
+            <P>"{advice?.advice}"</P>
+          </Animation>{" "}
         </DivAdvice>
       )}
       <Img src={mobileDivider} alt="" />
+      <ImgDesktop src={desktopDivider} alt="" />
       <Button onClick={fetchData}></Button>
     </MainDiv>
   );
