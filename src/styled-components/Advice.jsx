@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import dice from "../images/icon-dice.svg";
+import dividerDesktop from "../images/pattern-divider-desktop.svg";
 import { Device } from "../asset/device";
 
 export const MainDiv = styled.div`
@@ -8,66 +9,75 @@ export const MainDiv = styled.div`
     flex-direction: column;
     width: 90vw;
     height: 40vh;
-    margin: 0 auto;
-    background-color: hsl(217, 19%, 24%);
-    border-radius: 25px;
-    margin-top: 28vh;
   }
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 25px;
+  width: 40vw;
+  height: 45vh;
+  margin: auto;
+  border-radius: 25px;
+  position: relative;
 `;
 
 export const DivAdvice = styled.div`
-  @media ${Device.mobile} {
-    text-align: center;
-  }
+  text-align: center;
+  padding-top: 3vh;
 `;
 
 export const Button = styled.button`
-  @media ${Device.mobile} {
-    border-radius: 45px;
-    background-color: #5ff75f;
-    width: 30vw;
-    margin: 0 auto;
-    background-image: url(${dice});
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 7vh;
-    height: 7vh;
-    border-style: none;
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translateY(520%) translateX(-50%);
-  }
   cursor: pointer;
+  background: url(${dice}) no-repeat center;
+  width: 7vh;
+  height: 7vh;
+  border-style: none;
+  display: block;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #5ff75f;
+  border-radius: 45px;
 `;
 
 export const H2 = styled.h2`
+  color: var(--green);
+  padding-bottom: 3vh;
+  font-weight: 500;
+  font-size: 0.8rem;
+
   @media ${Device.mobile} {
-    color: #5ff75f;
     font-size: 1rem;
-    font-weight: 500;
   }
 `;
 
 export const P = styled.p`
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 1.6rem;
+  padding: 0 1.6vh;
+  padding-bottom: 3vh;
+
   @media ${Device.mobile} {
-    color: whitesmoke;
     font-size: 1.5rem;
-    padding: 0 1.6vh;
-    height: 100%;
   }
 `;
+
 export const Img = styled.img`
+
+  display: block;
+  margin: 0px auto;
+  padding-left: 2vh ;
+    padding-right: 2vh ;
   @media ${Device.mobile} {
     padding-bottom: 6vh;
+    width: 100%;
   }
 `;
 
 export const DivLoading = styled.div`
-  @media ${Device.mobile} {
-    text-align: center;
-    color: whitesmoke;
-    font-size: 1.5rem;
-    padding-top: 6vh;
-  }
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  padding-top: 6vh;
 `;
