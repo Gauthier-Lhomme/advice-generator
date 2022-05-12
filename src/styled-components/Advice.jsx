@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import dice from "../images/icon-dice.svg";
-import dividerDesktop from "../images/pattern-divider-desktop.svg";
 import { Device } from "../asset/device";
 import { keyframes } from "styled-components";
 

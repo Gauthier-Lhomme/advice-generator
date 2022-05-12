@@ -7,7 +7,6 @@ import {
   Button,
   DivAdvice,
   DivLoading,
-  FadeIn,
   H2,
   Img,
   ImgDesktop,
