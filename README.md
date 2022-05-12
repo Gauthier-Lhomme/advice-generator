@@ -4,4 +4,4 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
  
  [Api](https://api.adviceslip.com/)
 
-[desktop design](./src/images/desktop-design.jpg)
+![desktop design](./src/images/desktop-design.jpg)
