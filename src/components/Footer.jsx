@@ -1,13 +1,15 @@
-import { A, MainDiv } from "../styled-components/Footer";
+import { A, Container, MainDiv } from "../styled-components/Footer";
 
 const Footer = () => {
   return (
     <MainDiv>
-      Challenge by{" "}
-      <A href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-        Frontend Mentor
-      </A>
-      . Coded by <a href="#">Your Name Here</a>.
+      <Container>
+        Challenge by &nbsp
+        <A href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </A>
+        . Coded by &nbsp <A href="https://github.com/Gauthier-Lhomme/advice-generator" target="_blank">Gauthier Lhomme</A>.
+      </Container>
     </MainDiv>
   );
 };

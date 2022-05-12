@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
 export const MaindDiv = styled.div`
-background-color: blue ;
+display: "flex";
+min-height: 80vh ;
 `

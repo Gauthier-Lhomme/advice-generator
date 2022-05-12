@@ -18,6 +18,8 @@ export const MainDiv = styled.div`
   margin: auto;
   border-radius: 25px;
   position: relative;
+  margin-top: 19vh ;
+
 `;
 
 export const DivAdvice = styled.div`

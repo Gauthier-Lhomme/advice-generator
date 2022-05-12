@@ -1,13 +1,14 @@
 import Advice from "./components/Advice";
 import Footer from "./components/Footer";
+import { MaindDiv } from "./styled-components/App";
 
 
 const App = () => {
   return (
-    <div style={{minHeight: "100vh", display: "flex"}}>
+    <MaindDiv>
       <Advice/>
       <Footer/>
-    </div>
+    </MaindDiv>
   );
 }
 
